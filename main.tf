@@ -327,20 +327,20 @@ resource "local_file" "safile" {
 
 resource "null_resource" "clustert" {
   provisioner "local-exec" {
-    command = "kubectl.exe apply -f ${local.sapath}"
+    command = "kubectl apply -f ${local.sapath}"
   }
   depends_on = [local_file.safile]
 }
 
 resource "null_resource" "albcert" {
   provisioner "local-exec" {
-    command = "kubectl.exe apply -f cert-manager.yaml"
+    command = "kubectl apply -f cert-manager.yaml"
   }
 }
 
 resource "null_resource" "albinstall" {
   provisioner "local-exec" {
-    command = "kubectl.exe apply -f v2_4_4_full.yaml"
+    command = "kubectl apply -f v2_4_4_full.yaml"
   }
 }
 
