@@ -23,7 +23,7 @@ locals {
   region = "us-east-1"
 
   sapath = abspath("albSA.yaml")
-#   installalb = templatefile(abspath("v2_4_4_full.tftpl"), { clustername = "nextcluster"})
+#   installalb = templatefile(abspath("v2_4_4_full.tftpl"), { clustername = "cluster-za"})
   serviceacc = <<EOF
   apiVersion: v1
   kind: ServiceAccount
