@@ -719,7 +719,7 @@ spec:
     spec:
       containers:
       - args:
-        - --cluster-name=nextcluster
+        - --cluster-name=cluster-za
         - --ingress-class=alb
         image: amazon/aws-alb-ingress-controller:v2.4.4
         livenessProbe:
