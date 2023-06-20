@@ -345,7 +345,7 @@ resource "null_resource" "albcert" {
 
 resource "null_resource" "albinstall" {
   provisioner "local-exec" {
-    command = "kubectl apply -f v2_4_4_full.yaml"
+    command = "kubectl.exe apply -f v2_4_4_full.yaml"
   }
 }
 
